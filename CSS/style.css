@@ -14,6 +14,35 @@ body {
     z-index: 999;
 }
 
+#myBtn {
+    height: 3.2rem;
+    width: 3rem;
+    /* display: none; */
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 3.0rem;
+    /* Place the button at the bottom of the page */
+    right: 1.5rem;
+    /* Place the button 30rem from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: white;
+    /* Set a background color */
+    color: #f1502f;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: auto;
+    /* Some padding */
+    border-radius: .4rem;
+    /* Rounded corners */
+}
+
 .navbar {
     background-color: #efeee6 !important;
     box-shadow:
