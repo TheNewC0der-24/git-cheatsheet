@@ -7,40 +7,27 @@ body {
 }
 
 #loading {
-    position: fixed;
     width: 100%;
     height: 100%;
-    background: #ffffff url(../assets/git.gif) no-repeat center;
     z-index: 999;
+    position: fixed;
+    background: #ffffff url(../assets/git.gif) no-repeat center;
 }
 
 #myBtn {
-    height: 3.2rem;
     width: 3rem;
-    /* display: none; */
-    /* Hidden by default */
-    position: fixed;
-    /* Fixed/sticky position */
-    bottom: 3.0rem;
-    /* Place the button at the bottom of the page */
-    right: 1.5rem;
-    /* Place the button 30rem from the right */
     z-index: 99;
-    /* Make sure it does not overlap */
     border: none;
-    /* Remove borders */
     outline: none;
-    /* Remove outline */
-    background-color: white;
-    /* Set a background color */
-    color: #f1502f;
-    /* Text color */
-    cursor: pointer;
-    /* Add a mouse pointer on hover */
     padding: auto;
-    /* Some padding */
+    right: 1.5rem;
+    height: 3.2rem;
+    bottom: 3.0rem;
+    position: fixed;
+    cursor: pointer;
+    color: #f1502f;
     border-radius: .4rem;
-    /* Rounded corners */
+    background-color: white;
 }
 
 .navbar {
