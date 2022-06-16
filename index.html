@@ -1,0 +1,1188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="git cheatsheet, github cheatsheet, Git Cheatsheet, GitHub Cheatsheet, git-cheatsheet, github-cheatsheet">
+    <meta name="description" content="Git is the free and open source distributed version control system that's responsible for everything GitHub
+            related that happens locally on your computer. This cheat sheet features the most important and commonly
+            used Git commands for easy reference.">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Git Cheatsheet</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/responsive.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body onload="preLoader()">
+
+    <div id="loading"></div>
+
+    <nav class="navbar sticky-top navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <i class="fa-brands fa-git-alt fa-2x" style='color:#f1502f'></i>
+                <span class="fs-2 fw-bold">git</span>
+                <span class="desc" style="color: #9a999a;">--everything-is-local</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <i class="fa-solid fa-bars open"></i>
+                <i class="fa-solid fa-xmark close"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class=" icons d-flex ms-auto gap-2" data-bs-toggle="collapse"
+                    data-bs-target=".navbar-collapse.show">
+                    <a href="https://www.instagram.com/__khurana__._/" target="_blank">
+                        <i class=" fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://www.facebook.com/bhavya.khurana.399/" target="_blank">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bhavyakhurana24/" target="_blank">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://twitter.com/Bhavya06001699" target="_blank">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/TheNewC0der-24" target="_blank">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://stackoverflow.com/users/16262496/bhavya-khurana" target="_blank">
+                        <i class="fab fa-stack-overflow fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <p align="justify">
+            Git is the free and open source distributed version control system that's responsible for everything GitHub
+            related that happens locally on your computer. This cheat sheet features the most important and commonly
+            used Git commands for easy reference.
+        </p>
+
+        <p class="commit text-white rounded d-flex justify-content-between p-2 fw-bold mb-4"
+            style="background-color: #f1502f;">
+            <code class="fs-6" style="color: #333;">
+                git commit -m "𝐇𝐞𝐥𝐥𝐨 𝐭𝐡𝐞𝐫𝐞, 𝐟𝐞𝐥𝐥𝐨𝐰 <𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛𝚜 />!"
+            </code>
+            <span class="badge text-white" style="background-color: #333;">made with ❤️</span>
+        </p>
+
+        <div class="row row-cols-1 row-cols-md-2 g-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-terminal me-2"></i>GIT BASICS
+                        </h5>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">git init
+                                        <code>[directory]</code>
+                                    </div>
+                                    Create empty Git repo in specified directory. Run with no arguments to initialize
+                                    the current directory as a git
+                                    repository.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git clone
+                                        <code>[repo]</code>
+                                    </div>
+                                    Clone repo located at <repo> onto local machine. Original repo can be located on the
+                                        local filesystem or on a remote
+                                        machine via HTTP or SSH.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git config user.name
+                                        <code>[name]</code>
+                                    </div>
+                                    Define author name to be used for all commits in current repo. Devs commonly use
+                                    --global flag to set config options for
+                                    current user.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git add
+                                        <code>[directory]</code>
+                                    </div>
+                                    Stage all changes in
+                                    <code class="text-primary">directory</code>
+                                    for the next commit. Replace
+                                    <code class="text-primary">directory</code>
+                                    with a
+                                    <code class="text-primary">file</code>
+                                    to change a specific file.
+                                </div>
+                            </li>
+
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git commit -m
+                                        <code>"message"</code>
+                                    </div>
+                                    Commit the staged snapshot, but instead of launching a text editor, use
+                                    <code class="text-primary">message</code>
+                                    as the commit message.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git status
+                                    </div>
+                                    List which files are staged, unstaged, and untracked.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log
+                                    </div>
+                                    Display the entire commit history using the default format.
+                                    For customization see additional options.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git diff
+                                    </div>
+                                    Show unstaged changes between your index and working directory.
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Configuring user information, initializing and cloning repositories</caption>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-clock-rotate-left me-2"></i>REWRITING GIT HISTORY
+                        </h5>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git commit --amend
+                                    </div>
+                                    Replace the last commit with the staged changes and last commit combined. Use with
+                                    nothing staged to edit the last
+                                    commit's message.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git rebase
+                                        <code>[base]</code>
+                                    </div>
+                                    Rebase the current branch onto
+                                    <code class="text-primary">base</code>.
+                                    <code class="text-primary">base</code>
+                                    can be a commit ID, branch name, a tag, or a relative reference to HEAD.
+                                </div>
+
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git reflog
+                                    </div>
+                                    Show a log of changes to the local repository's HEAD.
+                                    Add --relative-date flag to show date info or --all to show all refs.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git reset --hard
+                                        <code>[commit]</code>
+                                    </div>
+                                    clear staging area, rewrite working tree from specified commit
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Rewriting branches, updating commits and clearing history</caption>
+                    </div>
+                </div>
+
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-code-branch me-2"></i>
+                            GIT BRANCHES
+                        </h5>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git branch
+                                    </div>
+                                    List all of the branches in your repo. Add a
+                                    <code class="text-primary">branch</code>
+                                    rgument to create a new branch with the name
+                                    <code class="text-primary">branch</code>.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git checkout -b
+                                        <code>[branch]</code>
+                                    </div>
+                                    Create and check out a new branch named
+                                    <code class="text-primary">branch</code>.
+                                    Drop the -b flag to checkout an existing branch.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git branch <code>[branch-name]</code>
+                                    </div>
+                                    create a new branch at the current commit
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git branch <code>[-a]</code>
+                                    </div>
+                                    List all local branches in repository. With -a: show all branches
+                                    (with remote).
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Isolating work in branches, changing context, and integrating changes</caption>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row row-cols-1 row-cols-md-2 g-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-book-bookmark me-2"></i>REMOTE REPOSITORIES
+                        </h5>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git remote add
+                                        <code>[name]</code>
+                                        <code>[url]</code>
+                                    </div>
+                                    Create a new connection to a remote repo. After adding a remote, you can use
+                                    <code class="text-primary">name</code>
+                                    as a shortcut for <code class="text-primary">url</code> in other
+                                    commands.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git fetch
+                                        <code>[remote]</code>
+                                        <code>[branch]</code>
+                                    </div>
+                                    Fetches a specific <code class="text-primary">branch</code>, from the repo. Leave
+                                    off <code class="text-primary">branch</code> to fetch all remote refs.
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Repository that's hosted on the Internet or another network.</caption>
+                    </div>
+                </div>
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-code-merge me-2"></i>GIT MERGE
+                        </h5>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git merge <code>[branch-name]</code>
+                                    </div>
+                                    merge the specified branch's history into the current one
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git merge <code>[alias]</code>/<code>[branch-name]</code>
+                                    </div>
+                                    merge a remote branch into your current branch to bring it up to date
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Retrieving updates from another repository</caption>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-delete-left me-2"></i>UNDOING CHANGES
+                        </h5>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git revert
+                                        <code>[commit]</code>
+                                    </div>
+                                    Create new commit that undoes all of the changes made in
+                                    <code class="text-primary">commit</code>,
+                                    then apply it to the current branch.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git reset
+                                        <code>[file]</code>
+                                    </div>
+                                    Remove <code class="text-primary">file</code> from the staging area, but leave
+                                    the working directory unchanged. This unstages a file without overwriting any
+                                    changes.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git clean -n
+                                    </div>
+                                    Shows which files would be removed from working directory.
+                                    Use the -f flag in place of the -n flag to execute the clean.
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Working with snapshots and the Git staging area</caption>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex">
+            <h3 class="fw-bold">Additional Options</h3>
+            <button class="ms-2 btn rounded-5" id="btn">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="container mt-5" id="additional">
+        <div class="row row-cols-1 row-cols-md-3 g-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-arrow-right-arrow-left me-2"></i>GIT DIFF
+                        </h5>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git diff HEAD
+                                    </div>
+                                    Show difference between working directory and last commit.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git diff --cached
+                                    </div>
+                                    Show difference between staged changes and last commit
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git diff --staged
+                                    </div>
+                                    diff of what is staged but not yet committed
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git diff branchB ... branchA
+                                    </div>
+                                    Show the diff of what is in branchA that is not in branchB.
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Examining diffs</caption>
+                    </div>
+                </div>
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-eye me-2"></i>GIT SHOW
+                        </h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git show <code>[SHA]</code>
+                                    </div>
+                                    show any object in Git in human-readable format
+                                </div>
+                            </li>
+                        </ul>
+                        <caption>Examining object information</caption>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-recycle me-2"></i>GIT RESET
+                        </h5>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git reset
+                                    </div>
+                                    Reset staging area to match most recent commit, but leave the working directory
+                                    unchanged.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git reset <span class="text-danger">--hard</span>
+                                    </div>
+                                    Reset staging area and working directory to match most recent commit and overwrites
+                                    all changes in the working directory.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git reset <code>[commit]</code>
+                                    </div>
+                                    Move the current branch tip backward to <code class="text-primary">commit</code>,
+                                    reset the staging area to match, but leave the working directory alone.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git reset <span class="text-danger">--hard</span>
+                                        <code>[commit]</code>
+                                    </div>
+                                    Same as previous, but resets both the staging area & working directory to match.
+                                    Deletes uncommitted changes, and all
+                                    commits after <code class="text-primary">commit</code>.
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-gears me-2"></i>TEMPORARY COMMITS
+                        </h5>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git stash
+                                    </div>
+                                    Save modified and staged changes
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git stash list
+                                    </div>
+                                    list stack-order of stashed file changes
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git stash pop
+                                    </div>
+                                    write working from top of stash stack
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git stash drop
+                                    </div>
+                                    discard the changes from top of stash stack
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Temporarily store modified, tracked files in order to change branches</caption>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-cookie me-2"></i>GIT REBASE
+                        </h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git rebase -i <code>[base]</code>
+                                    </div>
+                                    Interactively rebase current branch onto
+                                    <code class="text-primary">nase</code>. Launches editor to enter commands for how
+                                    each commit will be transferred to
+                                    the new base.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="mt-5 d-flex justify-content-center mx-auto">
+            <div class="nav nav-tabs gap-2" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-config-tab" data-bs-toggle="tab" data-bs-target="#nav-config"
+                    type="button" role="tab" aria-controls="nav-config" aria-selected="true">
+                    <i class="fa-brands fa-git-square me-2"></i>Config
+                </button>
+
+                <button class="nav-link" id="nav-log-tab" data-bs-toggle="tab" data-bs-target="#nav-log" type="button"
+                    role="tab" aria-controls="nav-log" aria-selected="false">
+                    <i class="fa-brands fa-git-square me-2"></i>Log
+                </button>
+
+                <button class="nav-link" id="nav-pull-tab" data-bs-toggle="tab" data-bs-target="#nav-pull" type="button"
+                    role="tab" aria-controls="nav-pull" aria-selected="false">
+                    <i class="fa-brands fa-git-square me-2"></i>Pull
+                </button>
+
+                <button class="nav-link" id="nav-push-tab" data-bs-toggle="tab" data-bs-target="#nav-push" type="button"
+                    role="tab" aria-controls="nav-push" aria-selected="false">
+                    <i class="fa-brands fa-git-square me-2"></i>Push
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-config" role="tabpanel" aria-labelledby="nav-config-tab"
+                tabindex="0">
+                <div class="card config mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-screwdriver-wrench me-2"></i>GIT CONFIG
+                        </h5>
+                        <ol class="list-group list-group-flush list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git config --global user.name <code>“[firstname lastname]”</code>
+                                    </div>
+                                    set a name that is identifiable for credit when review version history
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git config --global user.email <code>“[valid-email]”</code>
+                                    </div>
+                                    set an email address that will be associated with each history marker
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git config --global color.ui auto
+                                    </div>
+                                    set automatic command line coloring for Git for easy reviewing
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git config --global
+                                        alias. <code>[alias-name]</code>
+                                        <code>[git-command]</code>
+                                    </div>
+                                    Create shortcut for a Git command. E.g. alias.glog “log --graph --oneline” will set
+                                    "git glog" equivalent to ”git log
+                                    --graph--oneline.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git config --system core.editor <code>[editor]</code>
+                                    </div>
+                                    Set text editor used by commands for all users on the machine. <code
+                                        class="text-primary">editor</code> arg should
+                                    be the command that launches the
+                                    desired editor (e.g., vi).
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git config --global --edit
+                                    </div>
+                                    Open the global configuration file in a text editor for manual editing.
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-log" role="tabpanel" aria-labelledby="nav-log-tab" tabindex="0">
+                <div class="card log">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-chart-simple me-2"></i>GIT LOG
+                        </h5>
+                        <ol class="list-group list-group-flush list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log -<code>[limit]</code>
+                                    </div>
+                                    Limit number of commits by <code class="text-primary">limit</code>.
+                                    E.g. "git log -5" will limit to 5 commits.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log --oneline
+                                    </div>
+                                    Condense each commit to a single line.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log -p
+                                    </div>
+                                    Display the full diff of each commit.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log --stat
+                                    </div>
+                                    Include which files were altered and the relative number of lines that were added or
+                                    deleted from each of them.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log --author=
+                                        "<code>[pattern]</code>"
+                                    </div>
+                                    Search for commits by a particular author.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log --grep="<code>[pattern]</code>"
+                                    </div>
+                                    Search for commits with a commit message that matches <code
+                                        class="text-primary">pattern</code>.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log <code>[since]</code>..<code>[until]</code>
+                                    </div>
+                                    Show commits that occur between <code class="text-primary">since</code> and
+                                    <code class="text-primary">until</code>.
+                                    Args can be a commit ID, branch name, HEAD, or any other kind of revision reference.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log -- <code>[file]</code>
+                                    </div>
+                                    Only display commits that have the specified file.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log --graph --decorate
+                                    </div>
+                                    --graph flag draws a text based graph of commits on left side of commit msgs.
+                                    --decorate adds names of branches or tags of commits shown.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log branchB..branchA
+                                    </div>
+                                    show the commits on branchA that are not on branchB
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log --follow <code>[file]</code>
+                                    </div>
+                                    show the commits that changed file, even across renames
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Examining logs</caption>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-pull" role="tabpanel" aria-labelledby="nav-pull-tab" tabindex="0">
+                <div class="card pull">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-code-pull-request me-2"></i>GIT PULL
+                        </h5>
+                        <ol class="list-group list-group-flush list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git pull
+                                    </div>
+                                    Fetch and merge any commits from the tracking remote branch.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git pull <code>[remote]</code>
+                                    </div>
+                                    Fetch the specified remote's copy of current branch and immediately merge it into
+                                    the local copy.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git pull --rebase <code>[remote]</code>
+                                    </div>
+                                    Fetch the remote's copy of current branch and rebases it into the local
+                                    copy. Uses git rebase instead of merge to integrate the branches.
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Fetch and download content from a remote repository and immediately update the local
+                            repository to match that content.</caption>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-push" role="tabpanel" aria-labelledby="nav-push-tab" tabindex="0">
+                <div class="card push">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-code-commit me-2"></i>GIT PUSH
+                        </h5>
+                        <ol class="list-group list-group-flush list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git push <code>[remote]</code> <code>[branch]</code>
+                                    </div>
+                                    Push the branch to <code class="text-primary">remote</code>, along with necessary
+                                    commits and objects. Creates named branch in the remote repo if it doesn't exist.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git push <code>[remote]</code> <span class="text-danger">--force</span>
+                                    </div>
+                                    Forces the git push even if it results in a non-fast-forward merge. Do not use the
+                                    <code class="text-danger">--force</code> flag unless you're absolutely
+                                    sure you know what you're doing.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git push <code>[remote]</code> --all
+                                    </div>
+                                    Push all of your local branches to the specified remote.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git push <code>[remote]</code> --tags
+                                    </div>
+                                    Tags aren't automatically pushed when you push a branch or use the
+                                    --all flag. The --tags flag sends all of your local tags to the remote repo.
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Upload local repository content to a remote repository.</caption>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5" id="moreAdditional">
+        <div class="row row-cols-1 row-cols-md-2 g-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-code-compare me-2"></i>TRACKING PATH CHANGES
+                        </h5>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git rm <code>[file]</code>
+                                    </div>
+                                    Delete the file from project and stage the removal for commit.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git mv <code>[existing-path] [new-path]</code>
+                                    </div>
+                                    Change an existing file path and stage the move.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git log --stat -M
+                                    </div>
+                                    Show all commit logs with indication of any paths that moved.
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Versioning file removes and path changes.</caption>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-circle-xmark me-2"></i>IGNORING PATTERNS
+                        </h5>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        logs/ <br>
+                                        *.notes <br>
+                                        pattern*/
+                                    </div>
+                                    Save a file with desired patterns as <code class="text-primary">.gitignore</code>
+                                    with either direct string matches or wildcard globs.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        git config --global core.excludesfile <code>[file]</code>
+                                    </div>
+                                    System wide ignore pattern for all local repositories.
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Subheading</div>
+                                    Content for list item
+                                </div>
+                            </li>
+                        </ol>
+                        <caption>Preventing unintentional staging or commiting of files.</caption>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-md-2 g-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            THE ZOO OF WORKING AREAS
+                        </h5>
+                        <img src="./assets/The-zoo-of-working-areas.png" class="card-img-top" alt="working-area">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-3 note">
+                    <div class="row g-0">
+                        <div class="card-body">
+                            <ul class="list-group list-group-horizontal-md">
+                                <li class="list-group-item"><strong>Commit</strong></li>
+                                <li class="list-group-item">an object</li>
+                            </ul>
+                            <ul class="list-group mt-2 list-group-horizontal-md">
+                                <li class="list-group-item"><strong>Branch</strong></li>
+                                <li class="list-group-item">a reference to a commit; can have a <strong>tracked
+                                        upstream</strong></li>
+                            </ul>
+                            <ul class="list-group mt-2 list-group-horizontal-md">
+                                <li class="list-group-item"><strong>Tag</strong></li>
+                                <li class="list-group-item">a reference (standard) or an object (annotated)</li>
+                            </ul>
+                            <ul class="list-group mt-2 list-group-horizontal-md">
+                                <li class="list-group-item"><strong>Head</strong></li>
+                                <li class="list-group-item">a place of working directory is now</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="accordion mb-3" id="accordionExample">
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="fa-solid fa-download me-2"></i>
+                        INSTALLATION & GUIS
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            With platform specific installers for Git, GitHub also provides the
+                            ease of staying up-to-date with the latest releases of the command
+                            line tool while providing a graphical user interface for day-to-day
+                            interaction, review, and repository synchronization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="fa-brands fa-microsoft me-2"></i>
+                        GitHub for Windows
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse  collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>GitHub Desktop -</strong>
+                        Focus on what matters instead of fighting with Git. Whether
+                        you're new to Git or a seasoned user, GitHub Desktop simplifies your development
+                        workflow.
+                        for more, <a href="https://desktop.github.com/" target="_blank">Click here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="fa-brands fa-apple me-2"></i>
+                        GitHub for Mac
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            If you want to use GitHub on your Mac, you can download the GitHub from
+                            <a href="https://mac.github.com" target="_blank">Click here</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <i class="fa-solid fa-earth-asia me-2"></i>
+                        Git for All Platforms
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" id="accordionFour">
+                        <p>
+                            Git is a <a href="http://git-scm.com/about/free-and-open-source" target="_blank">free
+                                and
+                                open source</a> distributed version control system designed to handle
+                            everything
+                            from
+                            small to very large projects with speed and efficiency.
+
+                        </p>
+                        <p>
+                            Git is <a href="http://git-scm.com/doc" target="_blank">easy to learn</a> and
+                            has a
+                            <a href="http://git-scm.com/about/small-and-fast" target="_blank">tiny footprint
+                                with
+                                lightning fast performance</a>. It outclasses SCM tools like Subversion,
+                            CVS,
+                            Perforce,
+                            and ClearCase with features like <a href="http://git-scm.com/about/branching-and-merging"
+                                target="_blank">cheap
+                                local
+                                branching</a>, convenient <a href="http://git-scm.com/about/staging-area"
+                                target="_blank">
+                                staging areas</a>, and <a href="http://git-scm.com/about/distributed">multiple
+                                workflows</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="fw-bold" style='color:#f1502f'>
+            For Linux and Solaris platforms, the latest release is available on
+            the official Git web site.
+        </p>
+        <hr>
+    </div>
+
+    <footer class="text-center text-lg-start text-white mt-5" style="background-color: #333">
+        <section class="d-flex justify-content-between p-4" style="background-color: #9a999a">
+            <div class="me-5">
+                <span>Get connected with me on social networks:</span>
+            </div>
+
+            <div class="icons">
+                <a href="https://www.instagram.com/__khurana__._/" target="_blank">
+                    <i class=" fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://www.facebook.com/bhavya.khurana.399/" target="_blank">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/bhavyakhurana24/" target="_blank">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://twitter.com/Bhavya06001699" target="_blank">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="https://github.com/TheNewC0der-24" target="_blank">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://stackoverflow.com/users/16262496/bhavya-khurana" target="_blank">
+                    <i class="fab fa-stack-overflow fa-2x"></i>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Bhavya Khurana</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #f1502f; height: 2px" />
+                        <p>
+                            I believe everything is an Art when we put your consciousness.
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #f1502f; height: 2px" />
+                        <p>
+                            <a href="education@github.com" target="_blank" class="text-white">education@github.com</a>
+                        </p>
+                        <p>
+                            <a href="education.github.com" target="_blank" class="text-white">education.github.com</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #f1502f; height: 2px" />
+                        <p><i class="fas fa-home mr-3"></i> India, Jaipur 302019, Rajasthan</p>
+                        <p><i class="fas fa-envelope mr-3"></i>
+                            <a href="mailto:khuranabhavya24@gmail.com"
+                                style="color: white; text-decoration: none;">khuranabhavya24@gmail.com
+                            </a>
+                        </p>
+                        <p><i class="fas fa-phone mr-3"></i>
+                            <a href="tel:9352433995" style="color: white; text-decoration: none;">+91
+                                9352433995
+
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center p-3" style="background-color: #f1502f">
+            ©️ 2022 Copyright:
+            <a class="text-white" href="https://wa.me/9352433995" target="_blank">Bhavya Khurana</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

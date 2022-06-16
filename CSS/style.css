@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400&display=swap');
+
+body {
+    color: #333 !important;
+    background-color: #efeee6 !important;
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ffffff url(../assets/git.gif) no-repeat center;
+    z-index: 999;
+}
+
+.navbar {
+    background-color: #efeee6 !important;
+    box-shadow:
+        0px 0px 2.2px rgba(0, 0, 0, 0.02),
+        0px 0px 5.3px rgba(0, 0, 0, 0.028),
+        0px 0px 10px rgba(0, 0, 0, 0.035),
+        0px 0px 17.9px rgba(0, 0, 0, 0.042),
+        0px 0px 33.4px rgba(0, 0, 0, 0.05),
+        0px 0px 80px rgba(0, 0, 0, 0.07) !important;
+}
+
+.fa-git-alt {
+    transform: translateY(8px);
+}
+
+button[aria-expanded="false"]>.close {
+    display: none;
+}
+
+button[aria-expanded="true"]>.open {
+    display: none;
+}
+
+.navbar-toggler {
+    border: none !important;
+    color: #333 !important;
+    font-size: 30px !important;
+}
+
+.navbar-toggler:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+
+.icons a {
+    text-decoration: none;
+}
+
+.icons a:hover {
+    transform: scale(1.1);
+}
+
+a .fa-instagram {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, #8a3ab9 10%, #F55555 100%);
+}
+
+a .fa-instagram:hover {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, #f1502f 10%, #ffa41b 100%);
+}
+
+a .fa-facebook {
+    color: #3b5998;
+}
+
+a .fa-facebook:hover {
+    color: #f1502f;
+}
+
+a .fa-linkedin {
+    color: #0077b5;
+}
+
+a .fa-linkedin:hover {
+    color: #f1502f;
+}
+
+a .fa-twitter {
+    color: #00acee;
+}
+
+a .fa-twitter:hover {
+    color: #f1502f;
+}
+
+a .fa-github {
+    color: #333;
+}
+
+a .fa-github:hover {
+    color: #f1502f;
+}
+
+a .fa-stack-overflow {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(180deg, #f48024 60%, #bcbbbb 100%);
+}
+
+a .fa-stack-overflow:hover {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, #f1502f 10%, #f1502f 100%);
+}
+
+.card {
+    cursor: pointer;
+    border: none !important;
+    color: #333 !important;
+    background-color: #f5f5f5 !important;
+}
+
+.card:hover {
+    box-shadow:
+        0px 0px 2.2px rgba(0, 0, 0, 0.02),
+        0px 0px 5.3px rgba(0, 0, 0, 0.028),
+        0px 0px 10px rgba(0, 0, 0, 0.035),
+        0px 0px 17.9px rgba(0, 0, 0, 0.042),
+        0px 0px 33.4px rgba(0, 0, 0, 0.05),
+        0px 0px 80px rgba(0, 0, 0, 0.07) !important;
+}
+
+.card-title {
+    color: #f1502f !important;
+    font-weight: bold !important;
+}
+
+.list-group-item {
+    border-color: #f1502f !important;
+}
+
+#btn {
+    color: #fff;
+    transition: all .2s;
+    background-color: #f1502f;
+    transform: translateY(-3px);
+}
+
+#btn:hover {
+    box-shadow: none;
+    border: 1px solid #f1502f;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+}
+
+#btn:focus {
+    border: 1px solid #f1502f !important;
+}
+
+#additional {
+    display: none;
+}
+
+#moreAdditional {
+    display: none;
+}
+
+.nav-tabs .nav-link.active {
+    color: white !important;
+    border-color: #f1502f !important;
+    background-color: #f1502f !important;
+}
+
+.nav-link {
+    color: #f1502f !important;
+    font-weight: bold !important;
+    background-color: #fff !important;
+}
+
+.nav-link:hover {
+    border-color: white !important;
+}
+
+.config:hover,
+.log:hover,
+.pull:hover,
+.push:hover {
+    box-shadow: none !important;
+}
+
+.note {
+    background-color: #f1502f !important;
+}
+
+.accordion-item {
+    border-radius: 0 !important;
+    border-color: #f1502f !important;
+}
+
+.accordion-body {
+    background-color: #efeee6 !important;
+}
+
+.accordion-button {
+    outline: 0 !important;
+    border: none !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    text-decoration: none !important;
+    background-color: #f1502f !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: var(--bs-accordion-btn-icon) !important;
+}
+
+#accordionFour a {
+    text-decoration: none !important;
+}
