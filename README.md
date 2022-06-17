@@ -26,3 +26,18 @@ This cheatsheet is hosted on Netlify, hence accessible anywhere.
 ## Lighthouse Report
 ![image](https://github.com/TheNewC0der-24/git-cheatsheet/blob/master/Lighthouse%20Report.png)
 
+## Preview
+<p align="Center">
+  <img src="https://github.com/TheNewC0der-24/git-cheatsheet/blob/master/Preview/Preview-1.png" width="400">
+  <img src="https://github.com/TheNewC0der-24/git-cheatsheet/blob/master/Preview/Preview-2.png" width="400">
+  <img src="https://github.com/TheNewC0der-24/git-cheatsheet/blob/master/Preview/Preview-3.png" width="400">
+</p>
+
+## Link
+```
+https://git-everything-is-local.netlify.app/
+```
+
+---
+<h3 align="center">Hope this Cheatsheet is helpful :-)</h3>
+<p align="center"> Show some ❤️ by ⭐ this Repository</p>
