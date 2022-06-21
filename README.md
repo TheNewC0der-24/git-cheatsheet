@@ -18,7 +18,7 @@ This cheat sheet features the most important and commonly used Git commands for 
 |HTML|CSS|JavaScript|Bootstrap|
 |---|---|---|---|
 
-## Hosted 
+## Hosted On
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a8fc2494-0225-42af-a3df-34606239f1c0/deploy-status)](https://app.netlify.com/sites/git-everything-is-local/deploys)
 
 This cheatsheet is hosted on Netlify, hence accessible anywhere.
