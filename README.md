@@ -1,43 +1,40 @@
-<h1 align='center'>git Cheatsheet</h1>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## About
-<p align='justify'>
-Git is the free and open source distributed version control system that's responsible for everything GitHub related that happens locally on your computer. 
-This cheat sheet features the most important and commonly used Git commands for easy reference.
-  
-> _This git Cheatsheet is for all the <𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛𝚜/>! out there._
-</p>
+## Getting Started
 
-## Features
-* This cheatsheet has all the `Basic` and `Useful` commands.
-* You can load **Additional Options** of the git by just clicking the `+` button.
-* You are provided the **important links** in the accordian and footer.
-* You can also connect with me on my **Social Networks**.
+First, run the development server:
 
-## Built With
-|HTML|CSS|JavaScript|Bootstrap|
-|---|---|---|---|
-
-## Hosted On
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a8fc2494-0225-42af-a3df-34606239f1c0/deploy-status)](https://app.netlify.com/sites/git-everything-is-local/deploys)
-
-This cheatsheet is hosted on Netlify, hence accessible anywhere.
-
-## Lighthouse Report
-![image](https://github.com/TheNewC0der-24/git-cheatsheet/blob/master/Lighthouse%20Report.png)
-
-## Preview
-<p align="Center">
-  <img src="https://github.com/TheNewC0der-24/git-cheatsheet/blob/master/Preview/Preview-1.png" width="400">
-  <img src="https://github.com/TheNewC0der-24/git-cheatsheet/blob/master/Preview/Preview-2.png" width="400">
-  <img src="https://github.com/TheNewC0der-24/git-cheatsheet/blob/master/Preview/Preview-3.png" width="400">
-</p>
-
-## Link
-```
-https://git-everything-is-local.netlify.app/
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
-<h3 align="center">Hope this Cheatsheet is helpful :-)</h3>
-<p align="center"> Show some ❤️ by ⭐ this Repository</p>
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
